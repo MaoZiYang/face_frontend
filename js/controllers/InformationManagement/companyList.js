@@ -30,7 +30,7 @@ angular.module('admin')
 
         // 删除高校信息
         vm.delCompany = function (id, index) {
-            $rootScope.operationConfirm("删除高校后该高校职位信息将被删除。", "你确定要执行删除操作吗？", function () {
+            $rootScope.operationConfirm("删除高校后该高校学生信息将被删除。", "你确定要执行删除操作吗？", function () {
                 // 发送删除请求
                 infoManagementService.delCompany(id).then(function (res) {
                     if (res.data.code === 0) {

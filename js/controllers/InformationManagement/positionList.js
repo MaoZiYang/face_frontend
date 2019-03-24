@@ -29,7 +29,7 @@ angular.module('admin')
             switch (true) {
                 case status === 1:
                     // 下架
-                    $rootScope.operationConfirm("下架后该职位将不在前台展示。", "是否执行下架操作？", function () {
+                    $rootScope.operationConfirm("下架后该学生将不在前台展示。", "是否执行下架操作？", function () {
                         status = commonUtil.statusReversal(status);
                         // 发送下架请求
                         infoManagementService.putPositionstatus(status, id).then(function (res) {
@@ -45,7 +45,7 @@ angular.module('admin')
                     break;
                 case status === 0:
                     // 上架
-                    $rootScope.operationConfirm("上架后该职位将在前台展示。", "是否执行上架操作？", function () {
+                    $rootScope.operationConfirm("上架后该学生将在前台展示。", "是否执行上架操作？", function () {
                         status = commonUtil.statusReversal(status);
                         // 发送上架请求
                         infoManagementService.putPositionstatus(status, id).then(function (res) {
@@ -56,7 +56,7 @@ angular.module('admin')
                             }
                             else {
                                 if (res.data.code === -6511) {
-                                    $rootScope.alert("如要上架职位.请先解冻职位所属高校")
+                                    $rootScope.alert("如要上架学生.请先解冻学生所属高校")
                                 }
                                 else {
                                     $rootScope.alert(res.data.message)

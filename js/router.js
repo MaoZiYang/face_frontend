@@ -214,7 +214,7 @@ function projectRouteConfig(
                     'js/directives/isteven-multi-select/isteven-multi-select.css']),
             },
         })
-        // 职位列表
+        // 学生列表
         .state('field.positionList', {
             url: '/positionList/:page/:size?companyId&companyName&name&experience&startAt&endAt&education&compensation&status&subCategory&category',
             templateUrl: 'views/InformationManagement/positionList.html',
@@ -225,7 +225,7 @@ function projectRouteConfig(
                     ['js/controllers/InformationManagement/positionList.js']),
             },
         })
-        // 职位详情
+        // 学生详情
         .state('field.positionDetails', {
             url: '/positionDetails?id&companyId&companyName',
             templateUrl: 'views/InformationManagement/positionDetails.html',

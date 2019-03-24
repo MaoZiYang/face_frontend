@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4 word-spacing-25">薪 资</label>
+                        <label class="control-label col-md-4 word-spacing-25">预警 资</label>
                         <div class="col-md-8">
                             <select class="form-control" ng-model="vm.searchParams.compensation">
                                 <option value="">全部</option>
@@ -145,8 +145,8 @@
 </div>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <strong ng-if="!vm.searchParams.companyId">职位列表</strong>
-        <strong ng-if="vm.searchParams.companyId">{{vm.searchParams.companyName}}的所在职位</strong>
+        <strong ng-if="!vm.searchParams.companyId">学生列表</strong>
+        <strong ng-if="vm.searchParams.companyId">{{vm.searchParams.companyName}}的所在学生</strong>
         <button class="btn btn-xs btn-danger pull-right"
                 ui-sref="field.positionDetails({companyId:vm.searchParams.companyId,companyName:vm.searchParams.companyName})"
                 ng-show="vm.searchParams.companyId">

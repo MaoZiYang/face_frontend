@@ -62,11 +62,11 @@ angular.module("admin")
                 console.log(id);
                 return "/face-admin-ajax/a/u/profession/status/?id=" + id + "&status=" + params
             },
-            // 获取职位明细信息接口
+            // 获取学生明细信息接口
             getPosition_url: function (id) {
                 return " /face-admin-ajax/a/profession/" + id
             },
-            // 获取高校福利标签接口
+            // 获取高校人脸考勤使用情况标签接口
             getCompanyTags_url: function (id) {
                 return "/face-admin-ajax/a/tags/" + id
             },

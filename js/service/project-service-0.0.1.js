@@ -102,7 +102,7 @@ angular.module('admin')
                     data: JSON.stringify(data)
                 })
             },
-            // 获取高校福利标签
+            // 获取高校人脸考勤使用情况标签
             getCompanyTags: function (id) {
                 return $http.get(pathProject.getCompanyTags_url(id))
             },

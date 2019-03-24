@@ -186,13 +186,13 @@ angular.module('admin')
     /**
      * Article 列表 过滤器(filter)
      * article：
-     * 字段 类别 type  0-首页banner 1-找职位banner  2-找精英banner 3-行业大图
+     * 字段 类别 type  0-首页banner 1-找学生banner  2-找精英banner 3-行业大图
      * 字段 来源 industry   type为3行业大图时使用 0-移动互联网 1-电子商务 2-企业服务 3-O2O 4-教育 5-金融 6-游戏
      * 字段 类别 status  1-草稿 2-上线
      */
     // 过滤 Article  类型
     .filter("articleTypeFilter", function () {
-        const articleType = ['首页Banner', '找职位Banner', '找精英Banner', '行业大图'];
+        const articleType = ['首页Banner', '找学生Banner', '找精英Banner', '行业大图'];
         return function (type) {
             return articleType[type];
         }
