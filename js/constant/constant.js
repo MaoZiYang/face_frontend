@@ -5,33 +5,33 @@ angular.module("admin")
 
 // 高校类别
     .constant('industry', [
-        {id: 0, name: '移动互联网'},
-        {id: 1, name: '电子商务'},
-        {id: 2, name: '企业服务'},
-        {id: 3, name: 'O2O'},
-        {id: 4, name: '教育'},
-        {id: 5, name: '金融'},
-        {id: 6, name: '游戏'}
+        {id: 0, name: '综合类'},
+        {id: 1, name: '理工类'},
+        {id: 2, name: '师范类'},
+        {id: 3, name: '农林类'},
+        {id: 4, name: '军事类'},
+        {id: 5, name: '医药类'},
+        {id: 6, name: '政法类'}
     ])
     // 使用人脸考勤规模
     .constant('financing', [
         {id: 0, name: '无需使用人脸考勤'},
-        {id: 1, name: '天使轮'},
-        {id: 2, name: 'A轮'},
-        {id: 3, name: 'B轮'},
-        {id: 4, name: 'C轮'},
-        {id: 5, name: 'D轮及以上'},
-        {id: 6, name: '上市高校'}
+        {id: 1, name: '使用人脸考勤V1.0'},
+        {id: 2, name: '使用人脸考勤V2.0'},
+        {id: 3, name: '使用人脸考勤V2.1'},
+        {id: 4, name: '使用人脸考勤V2.2'},
+        {id: 5, name: '使用人脸考勤V2.3'},
+        {id: 6, name: '使用人脸考勤V2.4'}
     ])
     // 高校类别多选数据
     .constant('companyIndustryGroup', [
-        {industry: 0, name: '移动互联网'},
-        {industry: 1, name: '电子商务'},
-        {industry: 2, name: '企业服务 '},
-        {industry: 3, name: 'O2O'},
-        {industry: 4, name: '教育'},
-        {industry: 5, name: '金融'},
-        {industry: 6, name: '游戏'}
+        {industry: 0, name: '综合类'},
+        {industry: 1, name: '理工类'},
+        {industry: 2, name: '师范类'},
+        {industry: 3, name: '农林类'},
+        {industry: 4, name: '军事类'},
+        {industry: 5, name: '医药类'},
+        {industry: 6, name: '政法类'}
     ])
     // 二级三级类目数据
     .constant('categoryData', [
