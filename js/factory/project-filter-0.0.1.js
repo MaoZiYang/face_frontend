@@ -51,7 +51,7 @@ angular.module('admin')
             }
         }
     })
-    // 高校冻结状态
+    // 高校人脸考勤状态
     .filter('freezedStatusFilter', function () {
         return function (param) {
             if (param === 0) {
@@ -64,7 +64,7 @@ angular.module('admin')
             }
         }
     })
-    // 高校冻结状态
+    // 高校人脸考勤状态
     .filter('changeFreezedStatusFilter', function () {
         return function (param) {
             if (param === 0) {
@@ -133,13 +133,13 @@ angular.module('admin')
         return function (status) {
             switch (status) {
                 case 0:
-                    return "大专";
+                    return "2015";
                 case 1:
-                    return "本科";
+                    return "2016";
                 case 2:
-                    return "硕士";
+                    return "2017";
                 case 3:
-                    return "博士";
+                    return "2018及以后";
             }
         }
     })
@@ -148,30 +148,30 @@ angular.module('admin')
         return function (status) {
             switch (status) {
                 case 0:
-                    return "应届";
+                    return "计算机";
                 case 1:
-                    return "1~2年";
+                    return "机械自动化";
                 case 2:
-                    return "3~5年";
+                    return "法学院";
                 case 3:
-                    return "6～9年";
+                    return "文学院";
                 case 4:
-                    return "4-10年及以上";
+                    return "商学院";
             }
         }
     })
-    //工资
+    //预警
     .filter('positionCompensationFilter', function () {
         return function (status) {
             switch (status) {
                 case 0:
-                    return "8K以下";
+                    return "良好";
                 case 1:
-                    return "8~15K";
+                    return "准预警";
                 case 2:
-                    return "16~25K ";
+                    return "一次预警";
                 case 3:
-                    return "26K及以上";
+                    return "多次预警";
             }
         }
     })
@@ -186,13 +186,13 @@ angular.module('admin')
     /**
      * Article 列表 过滤器(filter)
      * article：
-     * 字段 类别 type  0-首页banner 1-找学生banner  2-找精英banner 3-行业大图
-     * 字段 来源 industry   type为3行业大图时使用 0-移动互联网 1-电子商务 2-企业服务 3-O2O 4-教育 5-金融 6-游戏
+     * 字段 类别 type  0-首页banner 1-找学生banner  2-找精英banner 3-高校大图
+     * 字段 来源 industry   type为3高校大图时使用 0-综合类 1-理工类 2-师范类 3-农林类 4-军事类 5-医药类 6-政法类
      * 字段 类别 status  1-草稿 2-上线
      */
     // 过滤 Article  类型
     .filter("articleTypeFilter", function () {
-        const articleType = ['首页Banner', '找学生Banner', '找精英Banner', '行业大图'];
+        const articleType = ['首页Banner', '找学生Banner', '找精英Banner', '高校大图'];
         return function (type) {
             return articleType[type];
         }

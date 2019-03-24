@@ -23,14 +23,14 @@
                         <option value="0">首页Banner</option>
                         <option value="1">找学生Banner</option>
                         <option value="2">找精英Banner</option>
-                        <option value="3">行业大图</option>
+                        <option value="3">高校大图</option>
                     </select>
                     <span class="error" ng-show="myForm.type.$invalid && myForm.type.$dirty">
                         * 类型不能为空
                     </span>
                 </div>
                 <div class="col-md-2">
-                    <!--当类型选择行业大图,即 vm.params.type==3,才显示行业的下拉选择框-->
+                    <!--当类型选择高校大图,即 vm.params.type==3,才显示高校的下拉选择框-->
                     <select class="form-control" ng-if="vm.params.type==3" name="industry" ng-model="vm.params.industry"
                             required>
                         <option value="">请选择</option>
@@ -43,7 +43,7 @@
                         <option value="6">游戏</option>
                     </select>
                     <span class="error" ng-show="myForm.industry.$invalid && myForm.industry.$dirty">
-                        * 行业不能为空
+                        * 高校不能为空
                     </span>
 
                 </div>
