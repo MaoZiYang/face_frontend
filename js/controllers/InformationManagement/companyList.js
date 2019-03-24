@@ -1,5 +1,5 @@
 /**
- * 公司列表
+ * 高校列表
  */
 // 'use strict';
 //严格模式
@@ -14,7 +14,7 @@ angular.module('admin')
         // 省市区数据转换
         vm.searchParams.address = commonUtil.areaDateTransform($state.params.province, $state.params.city, $state.params.county);
 
-        // 获取公司列表
+        // 获取高校列表
         console.log(vm.searchParams);
         infoManagementService.getCompanyList(vm.searchParams).then(function (res) {
             if (res.data.code === 0) {
@@ -28,9 +28,9 @@ angular.module('admin')
             }
         });
 
-        // 删除公司信息
+        // 删除高校信息
         vm.delCompany = function (id, index) {
-            $rootScope.operationConfirm("删除公司后该公司职位信息将被删除。", "你确定要执行删除操作吗？", function () {
+            $rootScope.operationConfirm("删除高校后该高校职位信息将被删除。", "你确定要执行删除操作吗？", function () {
                 // 发送删除请求
                 infoManagementService.delCompany(id).then(function (res) {
                     if (res.data.code === 0) {
@@ -45,10 +45,10 @@ angular.module('admin')
             })
         };
 
-        // 冻结|解冻 公司
+        // 冻结|解冻 高校
         vm.freezeCompany = function (id, type, status) {
             if (status === 0) {
-                $rootScope.operationConfirm("冻结后该公司下的所有信息将不可用。", "是否执行冻结操作？", function () {
+                $rootScope.operationConfirm("冻结后该高校下的所有信息将不可用。", "是否执行冻结操作？", function () {
                     // 发送冻结请求
                     infoManagementService.changeCompanyStatus(id, type, 1).then(function (res) {
                         if (res.data.code === 0) {
@@ -62,7 +62,7 @@ angular.module('admin')
                 });
             }
             else if (status === 1) {
-                $rootScope.operationConfirm("解冻后该公司下的信息将可继续使用。", "是否执行解冻操作？", function () {
+                $rootScope.operationConfirm("解冻后该高校下的信息将可继续使用。", "是否执行解冻操作？", function () {
                     // 发送解冻请求
                     infoManagementService.changeCompanyStatus(id, type, 0).then(function (res) {
                         if (res.data.code === 0) {
@@ -77,10 +77,10 @@ angular.module('admin')
             }
         };
 
-        // 认证|解除 公司
+        // 认证|解除 高校
         vm.approveCompany = function (id, type, status) {
             if (status === 0) {
-                $rootScope.operationConfirm("认证后该公司将被标记为推荐公司。", "是否执行认证操作？", function () {
+                $rootScope.operationConfirm("认证后该高校将被标记为推荐高校。", "是否执行认证操作？", function () {
                     // 发送认证请求
                     infoManagementService.changeCompanyStatus(id, type, 1).then(function (res) {
                         if (res.data.code === 0) {
@@ -94,7 +94,7 @@ angular.module('admin')
                 });
             }
             else if (status === 1) {
-                $rootScope.operationConfirm("解除认证后该公司将不再标记为推荐公司。", "是否执行解除操作？", function () {
+                $rootScope.operationConfirm("解除认证后该高校将不再标记为推荐高校。", "是否执行解除操作？", function () {
                     // 发送解除认证请求
                     infoManagementService.changeCompanyStatus(id, type, 0).then(function (res) {
                         if (res.data.code === 0) {

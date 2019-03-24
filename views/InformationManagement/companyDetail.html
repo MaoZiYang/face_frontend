@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label col-md-4"><span class="text-danger">*</span>公司名称</label>
+                        <label class="control-label col-md-4"><span class="text-danger">*</span>高校名称</label>
                         <div class="col-md-8">
                             <input type="text"
                                    class="form-control"
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label col-md-4"><span class="text-danger">*</span>公司Slogan</label>
+                        <label class="control-label col-md-4"><span class="text-danger">*</span>高校Slogan</label>
                         <div class="col-md-8">
                             <input class="form-control" type="text"
                                    name="companySlogan"
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label col-md-4"><span class="text-danger">*</span>公司人数</label>
+                        <label class="control-label col-md-4"><span class="text-danger">*</span>高校人数</label>
                         <div class="col-md-8">
                             <input class="form-control"
                                    onkeyup="this.value=this.value.replace(/\D/g,'')"
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label col-md-4"><span class="text-danger">*</span>融资规模</label>
+                        <label class="control-label col-md-4"><span class="text-danger">*</span>使用人脸考勤规模</label>
                         <div class="col-md-8">
                             <select class="form-control"
                                     name="companyScale"
@@ -70,13 +70,13 @@
                                     ng-model="vm.data.company.financing"
                             >
                                 <option value="">请选择</option>
-                                <option value="0">无需融资</option>
+                                <option value="0">无需使用人脸考勤</option>
                                 <option value="1">天使轮</option>
                                 <option value="2">A轮</option>
                                 <option value="3">B轮</option>
                                 <option value="4">C轮</option>
                                 <option value="5">D轮以上</option>
-                                <option value="6">上市公司</option>
+                                <option value="6">上市高校</option>
                             </select>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
             </div>
             <!--图片上传1-->
             <div class="row form-group">
-                <label class="col-md-2 control-label"><span class="text-danger">*</span>公司Logo</label>
+                <label class="col-md-2 control-label"><span class="text-danger">*</span>高校Logo</label>
                 <div class="col-md-10 padding-0">
                     <div class="col-md-12 ">
                         <label class="btn btn-primary" for="file1">选择文件</label>
@@ -184,14 +184,14 @@
                 </div>
             </div>
             <div class="row form-group">
-                <label class="control-label col-md-2"><span class="text-danger">*</span>公司介绍</label>
+                <label class="control-label col-md-2"><span class="text-danger">*</span>高校介绍</label>
                 <div class="col-md-10">
                     <textarea class="form-control" required ng-model="vm.data.company.summary" rows="6"
                               maxlength="1000"></textarea>
                 </div>
             </div>
             <div class="row form-group">
-                <label class=" control-label col-md-2">公司标签</label>
+                <label class=" control-label col-md-2">高校标签</label>
                 <div class="col-md-4">
                     <div class="input-group">
                         <input class="form-control"
@@ -216,16 +216,16 @@
                 </div>
             </div>
 
-            <!--公司产品-->
+            <!--高校学院-->
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong>公司产品</strong>
+                    <strong>高校学院</strong>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label col-md-4">产品名称</label>
+                                <label class="control-label col-md-4">学院名称</label>
                                 <div class="col-md-8">
                                     <input class="form-control" type="text"
                                            maxlength="16"
@@ -235,7 +235,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label col-md-4">产品Slogan</label>
+                                <label class="control-label col-md-4">学院Slogan</label>
                                 <div class="col-md-8">
                                     <input class="form-control" type="text"
                                            maxlength="500"
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-2 control-label">产品Logo</label>
+                        <label class="col-md-2 control-label">学院Logo</label>
                         <div class="col-md-10 padding-0">
                             <div class="col-md-12 ">
                                 <label class="btn btn-primary" for="file2">选择文件</label>
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label class="control-label col-md-2">产品简介</label>
+                        <label class="control-label col-md-2">学院简介</label>
                         <div class="col-md-10">
                             <textarea class="form-control"
                                       maxlength="1000" ng-model="vm.data.productList[0].summary"
@@ -319,7 +319,7 @@
             <!--联系信息-->
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong>招聘公司相关信息</strong>
+                    <strong>招聘高校相关信息</strong>
                 </div>
                 <div class="panel-body">
                     <div class="row">

@@ -10,7 +10,7 @@ angular.module('admin')
         vm.data.company = {};
         vm.data.productList = [];
 
-        // 公司行业多选数据
+        // 高校类别多选数据
         vm.companyIndustryGroup = companyIndustryGroup;
         // 从url中获取值
         vm.companyId = $state.params.companyId;
@@ -50,7 +50,7 @@ angular.module('admin')
                     vm.data = res.data.data;
                     // 省市区数据转换
                     commonUtil.areaTransform(vm.area, vm.data.company, 0);
-                    // 公司行业数据转换为下拉多选数据
+                    // 高校类别数据转换为下拉多选数据
                     commonUtil.companyIndustryTransform(companyIndustryGroup, vm.data.industryList);
                 }
             });
@@ -65,9 +65,9 @@ angular.module('admin')
             if (!vm.companyId) {
                 // 省市区数据转换
                 commonUtil.areaTransform(vm.data.company, vm.area, 1);
-                // 下拉多选数据 转换为 公司行业数据
+                // 下拉多选数据 转换为 高校类别数据
                 vm.data.industryList = commonUtil.selectIndustryListTransform(vm.data.industryList, vm.selectedIndustryGroup);
-                // 新增公司详情
+                // 新增高校详情
                 infoManagementService.addCompany(vm.data).then(function (res) {
                     if (res.data.code === 0) {
                         $state.go("field.companyList", {}, {reload: true});
@@ -80,7 +80,7 @@ angular.module('admin')
             else if (vm.companyId) {
                 // 省市区数据转换
                 commonUtil.areaTransform(vm.data.company, vm.area, 1);
-                // 下拉多选数据 转换为 公司行业数据
+                // 下拉多选数据 转换为 高校类别数据
                 vm.data.industryList = commonUtil.selectIndustryListTransform(vm.data.industryList, vm.selectedIndustryGroup);
                 infoManagementService.editCompany(vm.companyId, vm.data).then(function (res) {
                     if (res.data.code === 0) {

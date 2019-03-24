@@ -195,7 +195,7 @@ angular.module('admin')
                 return false;
             },
 
-            // 公司行业数据 转换为 下拉多选数据
+            // 高校类别数据 转换为 下拉多选数据
             companyIndustryTransform: function (companyIndustryGroup, industryList) {
                 companyIndustryGroup.map(function (item) {
                     var isticked = industryList.some(function (industry) {
@@ -206,7 +206,7 @@ angular.module('admin')
                 return companyIndustryGroup
             },
 
-            // 下拉多选数据 转换为 公司行业数据
+            // 下拉多选数据 转换为 高校类别数据
             selectIndustryListTransform: function (industryList, selectedIndustryGroup) {
                 industryList = selectedIndustryGroup.map(function (item) {
                     if (item.ticked === true) {
@@ -291,7 +291,7 @@ angular.module('admin')
                     arr.splice(arr.indexOf(item), 1)
                 }
             },
-            //公司标签转换
+            //高校标签转换
             companyTags: function (tag) {
                 tag = tag.map(function (item) {
                     var obj = {};

@@ -3,10 +3,10 @@
  */
 angular.module('admin')
 /**
- * 公司列表
+ * 高校列表
  */
 
-// 公司行业
+// 高校类别
     .filter('companyIndustryFilter', function (industry) {
         var a = industry.length;
         return function (param) {
@@ -18,14 +18,14 @@ angular.module('admin')
             }
         }
     })
-    // 公司融资规模
+    // 高校使用人脸考勤规模
     .filter('companyFinancingFilter', function (financing) {
         var a = financing.length;
         return function (param) {
             return param >= a || param < 0 ? "?" : financing[param].name;
         }
     })
-    // 公司认证状态
+    // 高校认证签到时间
     .filter('approvedStatusFilter', function () {
         return function (param) {
             if (param === 0) {
@@ -38,7 +38,7 @@ angular.module('admin')
             }
         }
     })
-    // 操作公司认证状态
+    // 操作高校认证状态
     .filter('changeApprovedStatusFilter', function () {
         return function (param) {
             if (param === 0) {
@@ -51,7 +51,7 @@ angular.module('admin')
             }
         }
     })
-    // 公司冻结状态
+    // 高校冻结状态
     .filter('freezedStatusFilter', function () {
         return function (param) {
             if (param === 0) {
@@ -64,7 +64,7 @@ angular.module('admin')
             }
         }
     })
-    // 公司冻结状态
+    // 高校冻结状态
     .filter('changeFreezedStatusFilter', function () {
         return function (param) {
             if (param === 0) {
@@ -78,7 +78,7 @@ angular.module('admin')
         }
     })
 
-    //职业列表
+    //学生列表
     // 上架下架转换
     .filter('positionStatusChangeFilter', function () {
         return function (status) {
@@ -99,12 +99,12 @@ angular.module('admin')
             }
         }
     })
-    //职业主类
+    //学生主类
     .filter('positionCategoryFilter', function () {
         return function (status) {
             switch (status) {
                 case 1:
-                    return "产品";
+                    return "学院";
                 case 2:
                     return "UI";
                 case 3:
@@ -128,7 +128,7 @@ angular.module('admin')
             }
         }
     })
-    //学历要求
+    //入学年限
     .filter('positionEducationFilter', function () {
         return function (status) {
             switch (status) {
@@ -143,7 +143,7 @@ angular.module('admin')
             }
         }
     })
-    //工作经验
+    //所在学院
     .filter('positionExperienceFilter', function () {
         return function (status) {
             switch (status) {

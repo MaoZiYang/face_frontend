@@ -4,7 +4,7 @@
             <div class="row pd-bottom-2">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="col-md-4 control-label">在招公司</label>
+                        <label class="col-md-4 control-label">所在高校</label>
                         <div class="col-md-8">
                             <input class="form-control" ng-model="vm.searchParams.companyName">
                         </div>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4">职位名称</label>
+                        <label class="control-label col-md-4">学生姓名</label>
                         <div class="col-md-8">
                             <input class="form-control" ng-model="vm.searchParams.name">
                         </div>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4">工作经验</label>
+                        <label class="control-label col-md-4">所在学院</label>
                         <div class="col-md-8">
                             <select class="form-control" ng-model="vm.searchParams.experience">
                                 <option value="">全部</option>
@@ -37,7 +37,7 @@
             <div class="row pd-bottom-2">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4">发布时间</label>
+                        <label class="control-label col-md-4">签到时间</label>
                         <div class="col-md-8">
                             <input class="form-control" size="20" bs-datepicker autoclose="true"
                                    data-date-format="yyyy-MM-dd" data-date-type="number"
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4">学历要求</label>
+                        <label class="control-label col-md-4">入学年限</label>
                         <div class="col-md-8">
                             <select class="form-control" ng-model="vm.searchParams.education">
                                 <option value="">全部</option>
@@ -74,11 +74,11 @@
             <div class="row pd-bottom-2">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4">职业类别</label>
+                        <label class="control-label col-md-4">学号</label>
                         <div class="col-md-8">
                             <select class="form-control" ng-model="vm.searchParams.category">
                                 <option value="">全部</option>
-                                <option value="0">产品</option>
+                                <option value="0">学院</option>
                                 <option value="1">运营</option>
                                 <option value="2">技术</option>
                                 <option value="3">设计</option>
@@ -89,11 +89,11 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label col-md-4">职业子类</label>
+                        <label class="control-label col-md-4">学生子类</label>
                         <div class="col-md-8">
                             <select class="form-control" ng-model="vm.searchParams.subCategory">
                                 <option value="">全部</option>
-                                <option value="0">产品经理</option>
+                                <option value="0">学院经理</option>
                                 <option value="1">JAVA</option>
                                 <option value="2">IOS</option>
                                 <option value="3">Android</option>
@@ -146,7 +146,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <strong ng-if="!vm.searchParams.companyId">职位列表</strong>
-        <strong ng-if="vm.searchParams.companyId">{{vm.searchParams.companyName}}的在招职位</strong>
+        <strong ng-if="vm.searchParams.companyId">{{vm.searchParams.companyName}}的所在职位</strong>
         <button class="btn btn-xs btn-danger pull-right"
                 ui-sref="field.positionDetails({companyId:vm.searchParams.companyId,companyName:vm.searchParams.companyName})"
                 ng-show="vm.searchParams.companyId">
@@ -158,13 +158,13 @@
             <thead>
             <tr>
                 <th>序号</th>
-                <th>在招公司</th>
-                <th>职位名称</th>
-                <th>职业类别</th>
-                <th>薪资</th>
-                <th>学历要求</th>
-                <th>工作经验</th>
-                <th>发布时间</th>
+                <th>所在高校</th>
+                <th>学生姓名</th>
+                <th>学号</th>
+                <th>专业</th>
+                <th>入学年限</th>
+                <th>所在学院</th>
+                <th>签到时间</th>
                 <th>状态</th>
                 <th>操作</th>
             </tr>

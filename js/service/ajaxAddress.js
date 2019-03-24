@@ -24,40 +24,40 @@ angular.module("admin")
             upload_url: function () {
                 return "/face-admin-ajax/a/u/img/task"//3->task
             },
-            // 获取公司列表接口
+            // 获取高校列表接口
             getCompanyList_url: "/face-admin-ajax/a/company/search",
-            // 删除公司信息接口
+            // 删除高校信息接口
             delCompany_url: function (id) {
                 return "/face-admin-ajax/a/u/company/" + id
             },
-            // 认证/冻结公司状态接口
+            // 认证/冻结高校状态接口
             changeCompanyStatus_url: function (id, type, status) {
                 return "/face-admin-ajax/a/u/company/status?id=" + id + "&type=" + type + "&status=" + status;
             },
-            // 获取公司详情接口
+            // 获取高校详情接口
             getCompanyDetail_url: function (id) {
                 return "/face-admin-ajax/a/company/" + id;
             },
-            // 新增公司详情
+            // 新增高校详情
             addCompany_url: "/face-admin-ajax/a/u/company",
-            // 编辑公司详情
+            // 编辑高校详情
             editCompany_url: function (id) {
                 return "/face-admin-ajax/a/u/company/" + id
             },
 
-            // 职业列表接口
+            // 学生列表接口
             PositionList_url: " /face-admin-ajax/a/profession/search",//JSON/PositionList.json
-            // 添加职业接口
+            // 添加学生接口
             postPosition_url: "/face-admin-ajax/a/u/profession",
-            // 编辑职业接口
+            // 编辑学生接口
             putPosition_url: function (id) {
                 return " /face-admin-ajax/a/u/profession/" + id
             },
-            // 删除职业接口
+            // 删除学生接口
             deletePosition_url: function (id) {
                 return "/face-admin-ajax/a/u/profession/" + id
             },
-            // 职业冻结修改接口
+            // 学生冻结修改接口
             putPositionstatus_url: function (params, id) {
                 console.log(id);
                 return "/face-admin-ajax/a/u/profession/status/?id=" + id + "&status=" + params
@@ -66,7 +66,7 @@ angular.module("admin")
             getPosition_url: function (id) {
                 return " /face-admin-ajax/a/profession/" + id
             },
-            // 获取公司福利标签接口
+            // 获取高校福利标签接口
             getCompanyTags_url: function (id) {
                 return "/face-admin-ajax/a/tags/" + id
             },

@@ -56,7 +56,7 @@ angular.module('admin')
                             }
                             else {
                                 if (res.data.code === -6511) {
-                                    $rootScope.alert("如要上架职位.请先解冻职位所属公司")
+                                    $rootScope.alert("如要上架职位.请先解冻职位所属高校")
                                 }
                                 else {
                                     $rootScope.alert(res.data.message)

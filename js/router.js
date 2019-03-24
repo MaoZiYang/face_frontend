@@ -187,7 +187,7 @@ function projectRouteConfig(
     /**
      * 信息管理
      */
-    // 公司列表
+    // 高校列表
         .state('field.companyList', {
             url: '/companyList/:page/:size?name&product&province&city&county&financing&freezed&approved&industry',
             templateUrl: 'views/InformationManagement/companyList.html',
@@ -200,7 +200,7 @@ function projectRouteConfig(
                     'js/controllers/InformationManagement/companyList.js']),
             },
         })
-        // 公司详情
+        // 高校详情
         .state('field.companyDetail', {
             url: '/companyDetail?companyId&province&county&city',
             templateUrl: 'views/InformationManagement/companyDetail.html',

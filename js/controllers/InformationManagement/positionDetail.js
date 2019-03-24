@@ -24,7 +24,7 @@ angular.module('admin')
             }
         };
 
-        //获取公司福利标签列表
+        //获取高校福利标签列表
         infoManagementService.getCompanyTags($state.params.companyId).then(function (res) {
             vm.Multiselect = commonUtil.companyTags(res.data.tags);
             console.log(vm.Multiselect);
@@ -58,7 +58,7 @@ angular.module('admin')
                         // 获取二级联动中二级的数据
                         vm.subCategoryData = commonUtil.getSubCategoryFn(vm.params.category);
 
-                        //匹配公司标签和职位标签，设置默认选中
+                        //匹配高校标签和职位标签，设置默认选中
                         vm.Multiselect = vm.Multiselect.map(function (item) {
                             if (record.tags.some(function (itemtext) {
                                     return (item.name === itemtext.tag)

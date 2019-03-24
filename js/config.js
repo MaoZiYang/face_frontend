@@ -96,7 +96,7 @@ angular.module('admin', ['oc.lazyLoad', 'ui.router', 'ngCookies', 'mgcrea.ngStra
             modal.$promise.then(modal.show);
         };
         /**
-         * 职业列表-删除确认
+         * 学生列表-删除确认
          */
         $rootScope.operationConfirm = function (title, content, okFn, cancelFn) {
             var modal = $modal({

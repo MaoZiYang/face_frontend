@@ -18,24 +18,24 @@ angular.module('admin')
      */
     .factory('infoManagementService', function ($http, pathProject) {
         return {
-            // 获取公司列表
+            // 获取高校列表
             getCompanyList: function (params) {
                 return $http.get(pathProject.getCompanyList_url, {params: params})
             },
-            // 删除公司信息
+            // 删除高校信息
             delCompany: function (id) {
                 return $http.delete(pathProject.delCompany_url(id))
             },
-            // 认证/冻结公司状态接口
+            // 认证/冻结高校状态接口
             changeCompanyStatus: function (id, type, status) {
                 return $http.put(pathProject.changeCompanyStatus_url(id, type, status))
             },
-            // 获取公司详情
+            // 获取高校详情
             getCompanyDetail: function (id) {
                 return $http.get(pathProject.getCompanyDetail_url(id))
             },
 
-            // 新增公司详情
+            // 新增高校详情
             addCompany: function (data) {
                 return $http({
                     url: pathProject.addCompany_url,
@@ -50,7 +50,7 @@ angular.module('admin')
                 });
             },
 
-            // 编辑公司详情
+            // 编辑高校详情
             editCompany: function (id, data) {
                 return $http({
                     url: pathProject.editCompany_url(id),
@@ -63,26 +63,26 @@ angular.module('admin')
                 });
             },
 
-            // 获取职业列表
+            // 获取学生列表
             PositionList: function (params) {
                 return $http.get(pathProject.PositionList_url, {params: params})
             },
 
-            //职业上下架修改
+            //学生上下架修改
             putPositionstatus: function (params, id) {
                 console.log(pathProject.putPositionstatus_url(params, id));
                 return $http.put(pathProject.putPositionstatus_url(params, id))
 
             },
-            //职业删除
+            //学生删除
             deletePosition: function (id) {
                 return $http.delete(pathProject.deletePosition_url(id))
             },
-            // 获取职业详细信息
+            // 获取学生详细信息
             getPositionDetail: function (id) {
                 return $http.get(pathProject.getPosition_url(id))
             },
-            //职业添加
+            //学生添加
             postPosition: function (params, tag, id) {
                 var data = {};
                 data.profession = params;
@@ -102,11 +102,11 @@ angular.module('admin')
                     data: JSON.stringify(data)
                 })
             },
-            // 获取公司福利标签
+            // 获取高校福利标签
             getCompanyTags: function (id) {
                 return $http.get(pathProject.getCompanyTags_url(id))
             },
-            //职业编辑
+            //学生编辑
             putPosition: function (params, tag, id) {
                 delete params.tags;
                 var data = {};

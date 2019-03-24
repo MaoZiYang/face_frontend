@@ -3,7 +3,7 @@
  */
 angular.module("admin")
 
-// 公司行业
+// 高校类别
     .constant('industry', [
         {id: 0, name: '移动互联网'},
         {id: 1, name: '电子商务'},
@@ -13,17 +13,17 @@ angular.module("admin")
         {id: 5, name: '金融'},
         {id: 6, name: '游戏'}
     ])
-    // 融资规模
+    // 使用人脸考勤规模
     .constant('financing', [
-        {id: 0, name: '无需融资'},
+        {id: 0, name: '无需使用人脸考勤'},
         {id: 1, name: '天使轮'},
         {id: 2, name: 'A轮'},
         {id: 3, name: 'B轮'},
         {id: 4, name: 'C轮'},
         {id: 5, name: 'D轮及以上'},
-        {id: 6, name: '上市公司'}
+        {id: 6, name: '上市高校'}
     ])
-    // 公司行业多选数据
+    // 高校类别多选数据
     .constant('companyIndustryGroup', [
         {industry: 0, name: '移动互联网'},
         {industry: 1, name: '电子商务'},
@@ -37,7 +37,7 @@ angular.module("admin")
     .constant('categoryData', [
         {
             id: 1,
-            name: "产品",
+            name: "学院",
             subCategory: [
                 {
                     id: 1,

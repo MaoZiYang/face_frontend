@@ -2,7 +2,7 @@
     <form name="myform" novalidate>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <strong>职业详细信息</strong>
+                <strong>学生详细信息</strong>
                 <select class="form-search pull-right"
                         ng-init="vm.params.recommend = 0"
                         ng-model="vm.params.recommend" required>
@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-4">职位名称</label>
+                            <label class="control-label col-md-4">学生姓名</label>
                             <div class="col-md-8">
                                 <input class="form-control"
                                        maxlength="16"
@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-4">在招公司</label>
+                            <label class="control-label col-md-4">所在高校</label>
                             <div class="col-md-8">
                                 <select class="form-control" disabled>
                                     <option value="">{{vm.params.companyName}}</option>
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-4">工作经验</label>
+                            <label class="control-label col-md-4">所在学院</label>
                             <div class="col-md-8">
                                 <select class="form-control" ng-model="vm.params.experience" required>
                                     <option value="">请选择</option>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-4">学历要求</label>
+                            <label class="control-label col-md-4">入学年限</label>
                             <div class="col-md-8">
                                 <select class="form-control" ng-model="vm.params.education" required>
                                     <option value="">请选择</option>
@@ -82,11 +82,11 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-4">职业分类</label>
+                            <label class="control-label col-md-4">学生分类</label>
                             <!--<div class="col-md-3">-->
                             <!--<select class="form-control" ng-model="vm.params.category">-->
                             <!--<option value="">请选择</option>-->
-                            <!--<option value=0>产品</option>-->
+                            <!--<option value=0>学院</option>-->
                             <!--<option value=1>运营</option>-->
                             <!--<option value=2>技术</option>-->
                             <!--<option value=3>设计</option>-->
@@ -97,7 +97,7 @@
                             <!--<div class="col-md-3">-->
                             <!--<select class="form-control" ng-model="vm.params.subCategory">-->
                             <!--<option value="">请选择</option>-->
-                            <!--<option value=0>产品经理</option>-->
+                            <!--<option value=0>学院经理</option>-->
                             <!--<option value=1>JAVA</option>-->
                             <!--<option value=2>IOS</option>-->
                             <!--<option value=3>Android</option>-->
@@ -131,7 +131,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="control-label col-md-2" ng-if="vm.Multiselect.length!==0">公司福利</label>
+                            <label class="control-label col-md-2" ng-if="vm.Multiselect.length!==0">高校福利</label>
                             <div class="col-md-10">
                                 <label ng-repeat="li in  vm.Multiselect track by $index"
                                        class="control-label  inline-block margin-10 vertical-align-middle">
@@ -166,7 +166,7 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="control-label col-md-2">公司福利</label>
+                                <label class="control-label col-md-2">高校福利</label>
                                 <div class="col-md-10">
                                     <textarea class="form-control" rows="8"
                                               maxlength="1000"
