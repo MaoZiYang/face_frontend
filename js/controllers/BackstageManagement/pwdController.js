@@ -14,7 +14,7 @@ angular.module('admin')
                     if (res.data.code == 0) {
                         $rootScope.alert("修改成功", function () {
                             vm.data = {
-                                oldPwd: "",
+                                pwd: "",
                                 newPwd: "",
                                 newPwdAgain: ""
                             };
