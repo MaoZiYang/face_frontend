@@ -5,6 +5,11 @@
     min-height: 100vh;
 }
 
+#animationWindow {
+    width: 100%;
+    height: 100%;
+}
+
 /*login页背景*/
 .bg-img {
     background-color: rgb(35, 42, 58);

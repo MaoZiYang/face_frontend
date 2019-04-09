@@ -7,6 +7,11 @@
 
 }
 
+#animationWindow {
+    width: 100%;
+    height: 100%;
+}
+
 /*login页背景*/
 .bg-img {
     background: url("/images/login-bg-orange.jpg") no-repeat center;

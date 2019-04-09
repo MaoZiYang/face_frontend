@@ -160,6 +160,83 @@ function projectRouteConfig(
         },
     })
     /**
+     * 高校接口调用
+     */.state('field.API', {
+        url: '/API',
+        templateUrl: 'views/BackstageManagement/APISetting.html',
+        controller: 'APICtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/APIController.js'),
+        },
+    })
+    /**
+     * 出勤点名
+     */.state('field.faceAPI', {
+        url: '/faceAPI',
+        templateUrl: 'views/BackstageManagement/faceAPISetting.html',
+        controller: 'faceAPICtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/faceAPIController.js'),
+        },
+    })
+    /**
+     * 师生点名互动
+     */.state('field.interact', {
+        url: '/interact',
+        templateUrl: 'views/BackstageManagement/interactSetting.html',
+        controller: 'interactCtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/interactController.js'),
+        },
+    })
+    /**
+     * 学生信息导出
+     */.state('field.studentexport', {
+        url: '/studentexport',
+        templateUrl: 'views/BackstageManagement/studentexportSetting.html',
+        controller: 'studentexportCtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/studentexportController.js'),
+        },
+    })
+    /**
+     * 学生出勤率
+     */.state('field.studentrate', {
+        url: '/studentrate',
+        templateUrl: 'views/BackstageManagement/studentrateSetting.html',
+        controller: 'studentrateCtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/studentrateController.js'),
+        },
+    })
+    /**
+     * 老师点名率
+     */.state('field.teacherrate', {
+        url: '/teacherrate',
+        templateUrl: 'views/BackstageManagement/teacherrateSetting.html',
+        controller: 'teacherrateCtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/teacherrateController.js'),
+        },
+    })
+    /**
+     * 老师账号管理
+     */.state('field.teachermanager', {
+        url: '/teachermanager',
+        templateUrl: 'views/BackstageManagement/teachermanagerSetting.html',
+        controller: 'teachermanagerCtrl',
+        resolve: {
+            loadMyFile: _lazyLoad(
+                'js/controllers/BackstageManagement/teachermanagerController.js'),
+        },
+    })
+    /**
      * 新添操作记录
      */
     .state('field.operatingRecord', {

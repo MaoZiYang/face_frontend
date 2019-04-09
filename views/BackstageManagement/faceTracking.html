@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="js/face/face-min.js"></script>
+    <script src="js/face/faceTracking.js"></script>
+    <script src="js/face/tracking-min.js"></script>
+    <script src="js/face/jquery-1.7.1.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        video, #canvas{
+            position: absolute;
+            width: 500px;
+            height: 436px;
+            border-raduis:50%;
+        }
+
+
+        .container {
+            margin: auto;
+            width: 500px;
+            height: 436px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <video id="video" preload autoplay loop muted></video>
+    <canvas id="canvas" width="500" height="436"></canvas>
+</div>
+<canvas id="shortCut" width="140" height="140" style="display: none;"></canvas>
+<div id="img" style="display: none;"></div>
+</body>
+</html>
