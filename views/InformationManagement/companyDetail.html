@@ -59,28 +59,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="control-label col-md-4"><span class="text-danger">*</span>使用人脸考勤规模</label>
-                        <div class="col-md-8">
-                            <select class="form-control"
-                                    name="companyScale"
-                                    required
-                                    ng-class="{'error':theForm.companyScale.$invalid && theForm.companyScale.$touched}"
-                                    ng-model="vm.data.company.financing"
-                            >
-                                <option value="">请选择</option>
-                                <option value="0">无需使用人脸考勤</option>
-                                <option value="1">天使轮</option>
-                                <option value="2">A轮</option>
-                                <option value="3">B轮</option>
-                                <option value="4">C轮</option>
-                                <option value="5">D轮以上</option>
-                                <option value="6">上市高校</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -223,16 +201,6 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label col-md-4">学院名称</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text"
-                                           maxlength="16"
-                                           ng-model="vm.data.productList[0].name">
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label col-md-4">学院Slogan</label>

@@ -23,7 +23,7 @@ angular.module('admin', ['oc.lazyLoad', 'ui.router', 'ngCookies', 'mgcrea.ngStra
                 toParams.size = toParams.size || 10;
             }
         });
-        /**
+        /**使用人脸考勤V1.0
          * 判断是否登录
          * @returns {boolean}
          */

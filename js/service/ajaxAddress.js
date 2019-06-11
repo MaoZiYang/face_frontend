@@ -94,21 +94,5 @@ angular.module("admin")
             changeArticleStatus_url: function (id, status) {
                 return "/face-admin-ajax/a/u/article/status?id=" + id + "&status=" + status;
             }
-
-
-            // getArticleList_url: "/face-admin-ajax/a/article/search",
-            // deleteArticle_url: function (id) {
-            //     return "JSON/asdasdasdasd" + id
-            // },
-            // //排序article
-            // postArticleSort_url: "JSON/BaASDASD",
-            // //编辑article
-            // putArticle_url: "/face-admin-ajax/a/u/article",
-            // //新增article
-            // postArticle_url: "/face-admin-ajax/a/u/article",
-            // //article详细接口
-            // getArticleDetail_url: function (id) {
-            //     return "/face-admin-ajax/a/article/" + id
-            // }
         }
     });

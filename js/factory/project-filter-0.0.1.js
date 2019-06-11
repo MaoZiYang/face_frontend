@@ -18,13 +18,6 @@ angular.module('admin')
             }
         }
     })
-    // 高校使用人脸考勤规模
-    .filter('companyFinancingFilter', function (financing) {
-        var a = financing.length;
-        return function (param) {
-            return param >= a || param < 0 ? "?" : financing[param].name;
-        }
-    })
     // 高校认证签到时间
     .filter('approvedStatusFilter', function () {
         return function (param) {
@@ -32,19 +25,6 @@ angular.module('admin')
                 return "未认证";
             } else if (param === 1) {
                 return "已认证";
-            }
-            else {
-                return "?";
-            }
-        }
-    })
-    // 操作高校认证状态
-    .filter('changeApprovedStatusFilter', function () {
-        return function (param) {
-            if (param === 0) {
-                return "认证";
-            } else if (param === 1) {
-                return "解除";
             }
             else {
                 return "?";
@@ -93,9 +73,9 @@ angular.module('admin')
     .filter('positionStatusFilter', function () {
         return function (status) {
             if (status == 1) {
-                return "上架";
+                return "签到";
             } else {
-                return "下架";
+                return "签退";
             }
         }
     })

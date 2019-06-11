@@ -16,39 +16,19 @@
                         <div class="col-md-8">
                             <select class="form-control" ng-model="vm.searchParams.industry">
                                 <option value="">全部</option>
-                                <option value="0">移动互联网</option>
-                                <option value="1">电子商务</option>
-                                <option value="2">企业服务</option>
-                                <option value="3">O2O</option>
-                                <option value="4">教育</option>
-                                <option value="5">金融</option>
-                                <option value="6">游戏</option>
+                                <option value="0">综合类</option>
+                                <option value="1">理工类</option>
+                                <option value="2">师范类</option>
+                                <option value="3">农林类</option>
+                                <option value="4">军事类</option>
+                                <option value="5">医药类</option>
+                                <option value="6">政法类</option>
                             </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label col-md-4">学院名称</label>
-                        <div class="col-md-8">
-                            <input class="form-control" ng-model="vm.searchParams.product">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label col-md-4">认证状态</label>
-                        <div class="col-md-8">
-                            <select class="form-control" ng-model="vm.searchParams.approved">
-                                <option value="">全部</option>
-                                <option value="0">未认证</option>
-                                <option value="1">已认证</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="control-label col-md-4">人脸考勤状态</label>
@@ -61,36 +41,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label col-md-4">使用人脸考勤规模</label>
-                        <div class="col-md-8">
-                            <select class="form-control" ng-model="vm.searchParams.financing">
-                                <option value="">全部</option>
-                                <option value="0">无需使用人脸考勤</option>
-                                <option value="1">天使轮</option>
-                                <option value="2">A轮</option>
-                                <option value="3">B轮</option>
-                                <option value="4">C轮</option>
-                                <option value="5">D轮及以上</option>
-                                <option value="6">上市高校</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--地区选择-->
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <label class="control-label col-md-2 word-spacing-25">地 区</label>
-                        <div class="col-md-10">
-                            <city-select select-result="vm.searchParams.address"></city-select>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <div class="row">
                 <div class="col-md-12 text-right ">
@@ -117,9 +67,6 @@
                     <th>序号</th>
                     <th>高校名称</th>
                     <th>高校类别</th>
-                    <th>地区</th>
-                    <th>使用人脸考勤规模</th>
-                    <th>认证状态</th>
                     <th>人脸考勤状态</th>
                     <th>操作</th>
                 </tr>
@@ -128,19 +75,9 @@
                 <tr ng-repeat="company in vm.companyList track by $index">
                     <td>{{$index+1}}</td>
                     <td>{{company.name}}</td>
-                    <td>{{company.industryList[0]|companyIndustryFilter}}</td>
-                    <td>{{company.city|cityFilter}}-{{company.county|countyFilter}}</td>
-                    <td>{{company.financing|companyFinancingFilter}}</td>
-                    <td>{{company.approved|approvedStatusFilter}}</td>
+                    <td>{{company.industryList|companyIndustryFilter}}</td>
                     <td>{{company.freezed|freezedStatusFilter}}</td>
                     <td>
-                        <button class="btn btn-xs btn-primary"
-                                ui-sref="field.positionList({companyId:company.id,companyName:company.name})">学生
-                        </button>
-                        <buttona class="btn btn-xs btn-default"
-                                 ng-click="vm.approveCompany(company.id,1,company.approved)">
-                            {{company.approved|changeApprovedStatusFilter}}
-                        </buttona>
                         <button class="btn btn-xs btn-info" ui-sref="field.companyDetail({companyId:company.id})">
                             <i class="fa fa-edit"></i> 编辑
                         </button>
